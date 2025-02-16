@@ -1,1 +1,1 @@
-[Learn more about the Skeleton project]()
+[Learn more about the Skeleton project](https://robercoding.dev/projects/kmm-skeleton-project)
