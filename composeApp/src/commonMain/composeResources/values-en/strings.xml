@@ -1,13 +1,11 @@
 <resources>
-    <string name="app_name">SkeletonProject</string>
-    <!--  Home Screen -->
-    <string name="home_tab">Home</string>
+    <!--  Home naming -->
+
     <!--  Settings screen  -->
-    <string name="settings_tab">Settings</string>
     <string name="settings_current_theme_title_light">Light theme</string>
     <string name="settings_current_theme_title_dark">Dark theme</string>
     <string name="settings_current_theme_subtitle">Tap to change the theme!</string>
 
-    <string name="settings_current_language_title">Unknown</string>
+    <string name="settings_current_language_title">English</string>
     <string name="settings_current_language_subtitle">Tap to change the language!</string>
 </resources>

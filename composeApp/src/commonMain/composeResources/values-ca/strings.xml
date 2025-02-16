@@ -1,0 +1,12 @@
+<resources>
+    <!--  Tab naming -->
+
+
+    <!--  Settings screen  -->
+    <string name="settings_current_theme_title_light">Tema clar</string>
+    <string name="settings_current_theme_title_dark">Tema fosc</string>
+    <string name="settings_current_theme_subtitle">Toca per canviar el tema!</string>
+
+    <string name="settings_current_language_title">Català</string>
+    <string name="settings_current_language_subtitle">Toca per canviar l’idioma!</string>
+</resources>

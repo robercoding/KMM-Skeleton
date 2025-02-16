@@ -2,13 +2,23 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
+import com.codingfeline.buildkonfig.compiler.FieldSpec
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.buildKonfig)
 }
+
+// Workaround: https://stackoverflow.com/a/79082144/9420348
+ksp {
+    arg("room.schemaLocation", "${projectDir}/schemas")
+}
+
 
 kotlin {
     androidTarget {
@@ -74,6 +84,7 @@ kotlin {
             implementation(libs.ktor.client.logging)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.konnecitvity)
 
             // DI
             implementation(libs.koin.core)
@@ -94,11 +105,11 @@ kotlin {
 }
 
 android {
-    namespace = "app.lenth"
+    namespace = "app.skeleton"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "app.lenth"
+        applicationId = "app.skeleton"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -114,13 +125,32 @@ android {
             isMinifyEnabled = false
         }
     }
+    androidResources {
+        @Suppress("UnstableApiUsage")
+        generateLocaleConfig = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
+
 dependencies {
     debugImplementation(compose.uiTooling)
+
+    // Workaround: https://stackoverflow.com/a/79082144/9420348
+    // KSP support for Room Compiler. Don't add kspCommonMetadataOnly
+    add("kspCommonMainMetadata", libs.room.compiler)
+    add("kspAndroid", libs.room.compiler)
+    add("kspIosSimulatorArm64", libs.room.compiler)
+    add("kspIosX64", libs.room.compiler)
+    add("kspIosArm64", libs.room.compiler)
 }
 
+buildkonfig {
+    packageName = "app.skeleton"
+    defaultConfigs {
+        buildConfigField(FieldSpec.Type.STRING, "API_MAPS", project.property("lenth.maps.apikey") as String)
+    }
+}

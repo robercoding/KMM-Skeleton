@@ -1,0 +1,11 @@
+<resources>
+    <!--  Home naming -->
+
+    <!--  Settings screen  -->
+    <string name="settings_current_theme_title_light">Tema claro</string>
+    <string name="settings_current_theme_title_dark">Tema oscuro</string>
+    <string name="settings_current_theme_subtitle">¡Toca para cambiar el tema!</string>
+
+    <string name="settings_current_language_title">Español</string>
+    <string name="settings_current_language_subtitle">¡Toca para cambiar el idioma!</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <!--  Home naming -->
+
+    <!--  Settings screen  -->
+    <string name="settings_current_theme_title_light">Argi gaia</string>
+    <string name="settings_current_theme_title_dark">Ilun gaia</string>
+    <string name="settings_current_theme_subtitle">Ukitu gaia aldatzeko!</string>
+
+    <string name="settings_current_language_title">Euskara</string>
+    <string name="settings_current_language_subtitle">Ukitu hizkuntza aldatzeko!</string>
+</resources>

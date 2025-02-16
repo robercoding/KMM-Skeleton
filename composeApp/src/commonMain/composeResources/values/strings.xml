@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">SkeletonProject</string>
     <!--  Home Screen -->
     <string name="home_tab">Home</string>
     <!--  Settings screen  -->
