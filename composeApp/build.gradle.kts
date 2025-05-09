@@ -8,7 +8,7 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.androidApplication)
-    alias(libs.plugins.composeMultiplatform)
+    alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.ksp)
     alias(libs.plugins.buildKonfig)
@@ -67,11 +67,10 @@ kotlin {
             // This does not work if you don't have JVM target... But already working on Intellij EAP https://kotlinlang.slack.com/archives/CJLTWPH7S/p1737654194601389.
             // Soon will be available on stable version. (Check on 2025.12.01). For now use Previews on Android source set.
             implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(libs.jetbrains.androidx.navigation.compose)
             implementation(libs.coil.compose)
-            implementation(libs.coil.compose.ktor) // Needed otherwise error shows up on runtime: Unable to create a fetcher that supports: (Also need darwin and ktor http for each platform)
+            implementation(libs.coil.network.ktor) // Needed otherwise error shows up on runtime: Unable to create a fetcher that supports: (Also need darwin and ktor http for each platform)
 
             // Local database
             implementation(libs.room.runtime)
