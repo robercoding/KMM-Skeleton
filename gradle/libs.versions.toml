@@ -25,23 +25,11 @@ junit = "4.13.2"
 kotlinx-datetime = "0.6.1"
 koin = "4.1.0-Beta8" # Upgrade with kotlin version https://mvnrepository.com/artifact/io.insert-koin/koin-bom
 ktor = "3.0.3"
-#kmpNativeCoroutines = "1.0.0-ALPHA-37" # https://github.com/rickclephas/KMP-NativeCoroutines
-#kmpNativeCoroutines = "1.0.0-ALPHA-42"
-kmpNativeCoroutines = "1.0.0-ALPHA-42-kotlin-2.1.21-RC"
 touchlabKermit = "2.0.4"
 generativeai-google = "0.9.0-1.1.0"
 kotestVersion = "5.7.2"
 konnectivity = "0.1-alpha01"
 kotlinx-coroutines = "1.10.2"
-
-#Showing All Messages
-#KLIB resolver: Could not find "/Users/fuentrob/.gradle/caches/modules-2/files-2.1/androidx.room/room-common-iosarm64/2.7.0-alpha12/a3a203cebae5f54114d88ff1118ab9a89615d71b/room-common-iosArm64Main-2.7.0-alpha12.klib" in [/Users/fuentrob/StudioProjects/Tikbit-KMM, /Users/fuentrob/.konan/klib, /Users/fuentrob/.konan/kotlin-native-prebuilt-macos-aarch64-2.0.21/klib/common, /Users/fuentrob/.konan/kotlin-native-prebuilt-macos-aarch64-2.0.21/klib/platform/ios_arm64]
-
-
-# Plugin versions
-#kmpObservableViewmodel = "1.0.0-BETA-7" # https://github.com/rickclephas/KMP-ObservableViewModel
-#kmpObservableViewmodel = "1.0.0-BETA-10-kotlin-2.1.21-RC"
-
 google-firebase-crashlyticsPlugin = "3.0.2"
 google-servicesPlugin = "4.4.2"
 
